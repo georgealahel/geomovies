@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+  <!-- action movies  -->
+
+  <div class="row custom-mt-10 p-5">
+    <h2>ACTION MOVIES</h2>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let a of actionMovieResult">
+        <div class="grid-item">
+        <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}" class="rowimg largeposter" alt="..."
+          [routerLink]="['/movie',a.id]">
+          <h5>{{a.original_title}}</h5>
+
+        </div>
+      </ng-container>
+
+    </div>
+
+  </div>

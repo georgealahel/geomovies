@@ -1,0 +1,16 @@
+<app-nav></app-nav>
+    <!-- trending movies  -->
+    <div class="row custom-mt-10 p-5">
+      <h2>TRENDING MOVIES</h2>
+      <div class="rowposter mt-3 p-2">
+        <ng-container *ngFor="let t of trendingMovieResult">
+          <div class="grid-item">
+          <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="..."
+            [routerLink]="['/movie',t.id]">
+           <h5>{{t.original_title}}</h5> </div>
+        </ng-container>
+
+      </div>
+
+    </div>
+

@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+  <!-- science-fiction movies  -->
+
+  <div class="row custom-mt-10 p-5">
+    <h2>SCIFI MOVIES</h2>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let sf of sciencefictionMovieResult">
+        <div class="grid-item">
+        <img src="https://image.tmdb.org/t/p/original/{{ sf.poster_path }}" class="rowimg largeposter" alt="..."
+          [routerLink]="['/movie',sf.id]">
+          <h5>{{sf.original_title}}</h5>
+
+        </div>
+      </ng-container>
+
+    </div>
+
+  </div>
+
+
